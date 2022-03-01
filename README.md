@@ -21,3 +21,10 @@ lista de jugadores a siete ya que po defecto pone seis y como la posicion en la 
 supera el tamaño y sale el error outOfBounds.
 
 Creo el test unitario "maximo_seis_jugadores"
+
+
+## Problema 3
+
+Agrego al método tirarDado la corrección "enCasillaCastigo[jugadorActual] = false;" que permite verificar que el
+jugador que sale de la carcel sale reflejado verdaderamente.
+
