@@ -16,9 +16,6 @@ public class GameLauncher {
             juego.agregar("Maria");
             juego.agregar("Juan");
             juego.agregar("Antonio");
-            juego.agregar("Pablo");
-            juego.agregar("Miriam");
-            juego.agregar("Manuel");
 
             if (juego.esJugable()) {
 

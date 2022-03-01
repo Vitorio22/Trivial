@@ -40,4 +40,5 @@ public class TrivialTests {
         boolean actual = maximo.esJugable();
         Assertions.assertEquals(expected, actual);
     }
+
 }
