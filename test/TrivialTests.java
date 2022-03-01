@@ -4,11 +4,6 @@ import smellytrivial.Game;
 
 public class TrivialTests {
     @Test
-    public void true_is_true(){
-        Assertions.assertTrue(false);
-    }
-
-    @Test
     public void crear_Game(){
         Game trivial = new Game();
     }
@@ -23,6 +18,16 @@ public class TrivialTests {
 
         String expected = "La nueva posición de Maria es 1";
         String actual = sut.nuevaPosicionJugador();
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void minimo_dos_jugadores()
+    {
+        Game minimo = new Game();
+        minimo.agregar("Víctor");
+
+        boolean expected = false;
+        boolean actual = minimo.esJugable();
         Assertions.assertEquals(expected, actual);
     }
 }

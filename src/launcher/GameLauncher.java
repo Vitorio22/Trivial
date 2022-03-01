@@ -10,27 +10,30 @@ public class GameLauncher {
     private static boolean noGanador;
 
     public static void main(String[] args) {
+
         Game juego = new Game();
 
-        juego.agregar("Maria");
-        juego.agregar("Juan");
-        juego.agregar("Antonio");
+            juego.agregar("Maria");
+            juego.agregar("Juan");
+            juego.agregar("Antonio");
 
-        Random rand = new Random();
+            if (juego.esJugable()) {
 
-        do {
+                Random rand = new Random();
 
-            juego.tirarDado(rand.nextInt(5) + 1);
+                do {
 
-            if (rand.nextInt(9) == 7) {
-                noGanador = juego.respuestaIncorrecta();
-            } else {
-                noGanador = juego.fueRespuestaCorrecta();
+                    juego.tirarDado(rand.nextInt(5) + 1);
+
+                    if (rand.nextInt(9) == 7) {
+                        noGanador = juego.respuestaIncorrecta();
+                    } else {
+                        noGanador = juego.fueRespuestaCorrecta();
+                    }
+
+
+                } while (noGanador);
             }
-
-
-
-        } while (noGanador);
-
+            else System.out.println("Error: El número mínimo de jugadores debe ser 2");
     }
 }
