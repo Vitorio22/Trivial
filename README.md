@@ -14,4 +14,10 @@ en el GameLauncher como condición.
 
 Creo el test unitario "minimo_dos_jugadores"
 
+## Problema 2
 
+Modifico el método esJugable() agregando un máximo de seis jugadores y aumento el tamaño del la
+lista de jugadores a siete ya que po defecto pone seis y como la posicion en la que comienza es 1
+supera el tamaño y sale el error outOfBounds.
+
+Creo el test unitario "maximo_seis_jugadores"
