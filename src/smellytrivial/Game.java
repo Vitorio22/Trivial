@@ -116,41 +116,31 @@ public class Game {
     }
 
     public boolean fueRespuestaCorrecta() {
-        if (enCasillaCastigo[jugadorActual]){
-            if (estaSaliendoDeLaCarcel) {
-                System.out.println("Respuesta correcta!!!!");
-                monederos[jugadorActual]++;
-                System.out.println(jugadores.get(jugadorActual)
-                        + " ahora tiene "
-                        + monederos[jugadorActual]
-                        + " monedas doradas.");
-
-                boolean ganador = jugadorHaGanado();
-                jugadorActual++;
-                if (jugadorActual == jugadores.size()) jugadorActual = 0;
-
+        if (enCasillaCastigo[jugadorActual] || estaSaliendoDeLaCarcel)
+        {
+            contadorMonedas();
+            boolean ganador = jugadorHaGanado();
+                siguienteJugador();
                 return ganador;
-            } else {
+        }
+        else
+        {
+            contadorMonedas();
+                boolean ganador = jugadorHaGanado();
                 siguienteJugador();
                 if (jugadorActual == jugadores.size()) jugadorActual = 0;
-                return true;
-            }
-
-        } else {
-
-            System.out.println("Respuesta correcta!!!!");
-            monederos[jugadorActual]++;
-            System.out.println(jugadores.get(jugadorActual)
-                    + " ahora tiene "
-                    + monederos[jugadorActual]
-                    + " monedas doradas.");
-
-            boolean ganador = jugadorHaGanado();
-            siguienteJugador();
-            if (jugadorActual == jugadores.size()) jugadorActual = 0;
-
-            return ganador;
+                return ganador;
         }
+    }
+
+    public boolean contadorMonedas() {
+        System.out.println("Respuesta correcta!!!!");
+        monederos[jugadorActual]++;
+        System.out.println(jugadores.get(jugadorActual)
+                + " ahora tiene "
+                + monederos[jugadorActual]
+                + " monedas doradas.");
+        return true;
     }
 
     public boolean respuestaIncorrecta(){
@@ -164,6 +154,7 @@ public class Game {
     }
 
     public boolean siguienteJugador() {
+        if (jugadorActual == jugadores.size()) jugadorActual = 0;
         jugadorActual++;
 
         return false;

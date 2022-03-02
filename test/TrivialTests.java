@@ -46,7 +46,7 @@ public class TrivialTests {
         Game ganador = new Game();
         ganador.agregar("Victor");
 
-        boolean expected = false;
+        boolean expected = true;
         boolean actual = ganador.jugadorHaGanado();
         Assertions.assertEquals(expected, actual);
     }
@@ -57,9 +57,18 @@ public class TrivialTests {
         siguiente.agregar("Luis");
         siguiente.agregar("Victor");
 
-
         boolean expected = false;
         boolean actual = siguiente.siguienteJugador();
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void simplificaMetodofueRespuestaCorrecta()
+    {
+        Game simpli = new Game();
+        simpli.agregar("Victor");
+
+        boolean expected = true;
+        boolean actual = simpli.contadorMonedas();
         Assertions.assertEquals(expected, actual);
     }
 }
