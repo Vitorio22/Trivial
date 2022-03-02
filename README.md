@@ -34,3 +34,10 @@ Hago publico el método jugadorHaGanado() para poder introducirlo en el Test, le
 lógica de que cuando el jugador tenga 6 monedas es el ganador y cambio en el GameLauncher el booleano noGanador por ganador.
 
 Creo el test unitario "noGanador_a_ganador"
+
+## Problema 5
+
+Cojo el código jugadorActual++ que se utiliza para pasar al siguiente jugador, lo refactorizo en un método común y
+elimino donde se encuentra el código duplicado.
+
+Creo el test unitario "siguienteJugador"
