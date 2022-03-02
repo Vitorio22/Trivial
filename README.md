@@ -22,7 +22,6 @@ supera el tamaño y sale el error outOfBounds.
 
 Creo el test unitario "maximo_seis_jugadores"
 
-
 ## Problema 3
 
 Agrego al método tirarDado la corrección "enCasillaCastigo[jugadorActual] = false;" que permite verificar que el
@@ -41,3 +40,10 @@ Cojo el código jugadorActual++ que se utiliza para pasar al siguiente jugador, 
 elimino donde se encuentra el código duplicado.
 
 Creo el test unitario "siguienteJugador"
+
+## Problema 6
+
+Extraigo varios if con código duplicado del método fueRespuestaCorrecta() y lo refactorizo la parte del contador de monedas
+que se repetía en ese método y hago otro llamado contadorMonedas().
+
+Creo el test unitario "simplificaMetodofueRespuestaCorrecta"
