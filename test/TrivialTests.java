@@ -50,4 +50,16 @@ public class TrivialTests {
         boolean actual = ganador.jugadorHaGanado();
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    public void siguienteJugador()
+    {
+        Game siguiente = new Game();
+        siguiente.agregar("Luis");
+        siguiente.agregar("Victor");
+
+
+        boolean expected = false;
+        boolean actual = siguiente.siguienteJugador();
+        Assertions.assertEquals(expected, actual);
+    }
 }

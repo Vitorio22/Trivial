@@ -14,10 +14,11 @@ public class Game {
     LinkedList preguntasDeportes = new LinkedList();
     LinkedList preguntasMusica = new LinkedList();
 
+
     int jugadorActual = 0;
     boolean estaSaliendoDeLaCarcel;
 
-    public  Game(){
+    public Game(){
         for (int i = 0; i < 50; i++) {
             preguntasCultura.addLast("Pregunta de Cultura " + i);
             preguntasCiencias.addLast(("Pregunta de Ciencias " + i));
@@ -130,12 +131,10 @@ public class Game {
 
                 return ganador;
             } else {
-                jugadorActual++;
+                siguienteJugador();
                 if (jugadorActual == jugadores.size()) jugadorActual = 0;
                 return true;
             }
-
-
 
         } else {
 
@@ -147,7 +146,7 @@ public class Game {
                     + " monedas doradas.");
 
             boolean ganador = jugadorHaGanado();
-            jugadorActual++;
+            siguienteJugador();
             if (jugadorActual == jugadores.size()) jugadorActual = 0;
 
             return ganador;
@@ -159,12 +158,18 @@ public class Game {
         System.out.println(jugadores.get(jugadorActual)+ " va a la casilla de castigo");
         enCasillaCastigo[jugadorActual] = true;
 
-        jugadorActual++;
+        siguienteJugador();
         if (jugadorActual == jugadores.size()) jugadorActual = 0;
         return true;
     }
 
+    public boolean siguienteJugador() {
+        jugadorActual++;
+
+        return false;
+    }
+
     public boolean jugadorHaGanado() {
-        return (monederos[jugadorActual] == 6);
+        return !(monederos[jugadorActual] == 6);
     }
 }
