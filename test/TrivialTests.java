@@ -40,5 +40,14 @@ public class TrivialTests {
         boolean actual = maximo.esJugable();
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    public void noGanador_a_ganador()
+    {
+        Game ganador = new Game();
+        ganador.agregar("Victor");
 
+        boolean expected = false;
+        boolean actual = ganador.jugadorHaGanado();
+        Assertions.assertEquals(expected, actual);
+    }
 }

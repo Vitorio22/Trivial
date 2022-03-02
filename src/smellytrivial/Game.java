@@ -164,8 +164,7 @@ public class Game {
         return true;
     }
 
-
-    private boolean jugadorHaGanado() {
-        return !(monederos[jugadorActual] == 6);
+    public boolean jugadorHaGanado() {
+        return (monederos[jugadorActual] == 6);
     }
 }
