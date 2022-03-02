@@ -28,3 +28,9 @@ Creo el test unitario "maximo_seis_jugadores"
 Agrego al método tirarDado la corrección "enCasillaCastigo[jugadorActual] = false;" que permite verificar que el
 jugador que sale de la carcel sale reflejado verdaderamente.
 
+## Problema 4
+
+Hago publico el método jugadorHaGanado() para poder introducirlo en el Test, le quito la exclamación para cambiar la
+lógica de que cuando el jugador tenga 6 monedas es el ganador y cambio en el GameLauncher el booleano noGanador por ganador.
+
+Creo el test unitario "noGanador_a_ganador"
